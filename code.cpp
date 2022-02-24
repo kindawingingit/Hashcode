@@ -15,15 +15,15 @@ void solve(int n)
 		string name="";
 		int num=0;
 		cin>>name>>num;
+		map<string, int> umap;
 		for(int j=0;j<num;j++)
 		{
 			string skill="";
 			int power=0;
 			cin>>skill>>power;
-			map<string, int> umap;
 			umap[skill]=power;
 		}
-		contributor[name].push_back(umap);
+		contributor[name]=umap;
 	}
 	for(auto it: contributor)
 	{
